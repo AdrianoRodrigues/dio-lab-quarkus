@@ -3,8 +3,9 @@ package domain;
 import java.util.List;
 
 public interface ElectionRepository {
-
-    void submit(Election election);
+    Election findById(String id);
 
     List<Election> findAll();
+
+    void vote(String electionId, Candidate candidate);
 }
